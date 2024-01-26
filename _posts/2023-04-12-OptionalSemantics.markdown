@@ -1,3 +1,16 @@
+---
+layout: post
+title:  "The semantics of Java Optional"
+date:   2023-04-12 13:14:49 +0100
+categories:
+  - coding
+tags:
+  - java
+  - semantics
+  - coding
+  - model
+---
+
 Java `Optional` is similar to a functional Maybe type. It either contains some value or not. However, there are some caveats associated with it. Lets's have a look at Optional and think about how and when to use it. And also think about it what it signals.
 
 ## The example

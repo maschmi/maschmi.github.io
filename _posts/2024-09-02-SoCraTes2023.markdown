@@ -1,0 +1,121 @@
+---
+layout: post
+title:  "SoCraTes Germany 2023"
+date:   2023-09-04 13:14:49 +0100
+categories:
+  - meta
+  - conference
+tags:
+  - software development
+  - conference
+---
+
+At the end of August, I joined the [SoCraTes 2023](https://www.socrates-conference.de/home) conference in Soltau. It was tremendous fun. So much fun I want to share with you some of my experiences. The main topic will be about trust and respect. This is a motive which somehow was present for me all the time. Be it at the conference level or elsewhere. However, I do want to start with some broader remarks about the conference and its format and a few session which stood out but do not fit well into the motive of trust and/or respect.
+
+So, let's get started with the first day of the conference for me.
+
+## The conference
+### Training Day
+
+SoCraTes 2023 came with a training day and a pre-defined schedule. For me, this was perfect. As I'm not that relaxed around big groups, **and** not knowing what will happen. I've decided I want to be part of the training day to get eased in. This worked perfectly. 
+
+At the end of the day I had learned about 
+* a new refactoring technique and that I usually slice and do not peel (thank you [Aki](https://www.linkedin.com/in/rinkkasatiainen/))
+* heard about modern CI/CD, how important observability is and which common mistakes are made (thank you [Chris](https://www.linkedin.com/in/cneuroth/) and [Raimo](https://www.linkedin.com/in/rradczewski/))
+* taken part in an ensemble exploratory testing session (thank you [Lisi](https://de.linkedin.com/in/lisihocke)) 
+* had some hands on on ArchUnit  (thank you [Javiera](https://www.linkedin.com/in/jlasoc/)) which may come in hand at work
+
+And above all I was way more relaxed to start into the World Cafe in the evening.
+### Open Space
+
+The conference is a gigantic open space. You may never know what happens or which sessions will be taking place when. Well, that is not entirely true. There is an opening and a closing on the Open Space days. At the opening the sessions will be advertised, and the schedule will be made. At the closing session the evening session will be advertised.  And, of course, there is plenty of time to talk to people and come together. Speaking of sessions and time, there is an [archived schedule](http://web.archive.org/web/20230828104402/https://scrts.de/socrates2023/index.html). You may realize there were not only strictly work related sessions provided, but somehow it did fit rather well together.
+### Sessions
+
+Personally, I did not propose a sessions. But I've learned there a multiple types of sessions.
+
+* Sessions with presentation on a distinct topic - more like a conference talk
+* Sessions with discussions about a topic
+* Sessions where the session "owner" does ask to be "teached"
+* Ensemble Sessions where a group tries to solve a problem together (this may include Capture The Flag session)
+* (Board)Gaming Sessions
+
+The biggest learning for me was: You do not have to be an expert to advertise a session, nor do you need to have something prepared. There may be people who answer your questions and everybody is prepared to chime in and get a discussion going.  For example, I've ended up in a session about LangChain where the session owner asked to get help to get started. Very interesting as I did not have heard of LangChain before, now I know this could be used to tell a LLM to only use information from a specific knowledge pool to answer a users prompt.
+
+### Workshop Day
+
+I've decided to travel home on Monday and not Sunday and take part at the Workshop day. For one reason I do like workshops and for another reason I wanted to take a day to wind down after being in a group with so many people. 
+The Workshop day is somewhat similar to an OpenSpace format, but I think the session slots were longer and fewer. I've ended up in a session about Security which basically took the whole day and even mostly of the late evening.
+
+## (Ever changing) Ensembles
+
+I learned a bit about ensembles and fishbowl ensembles. They both need structure. The latter one may have less as people can freely switch roles from participant to observer or may even leave entirely. By the way, structure also means scheduled breaks. 
+
+Also, I've heard good things about JetBrains CodeWithMe in remote sessions. The experience I had made with it a while ago were mixed. But they seem to be evolving and I definitely need to try it out again - maybe even in a production code setting, as soon as it is clear whether we may use it or not for compliance reasons.
+
+Does a fishbowl ensemble work? It may, but for sure it comes with its own challenges. We got an [enhanced vending machine kata](https://github.com/stefanscheidt/vending-machine) provided by [Stefan](https://www.linkedin.com/in/stefanscheidt/) started and running for a couple of hours. Some people did leave the group entirely, new ones joined. We did not accomplish much. 
+One of the interesting parts in the retro afterwards was we missed on-boarding of the new team members. New members joined, did make assumptions about the code and the project we were working on but were never on-boarded to the bigger picture. This lead to a lot of discussions and re-visiting already visited and not done implementations. I was reminded a bit about ever changing team members in a longer running project - every change does need to be accompanied by a thorough on-boarding which takes a lot of time and energy. And you also need to have documentation and the time to read through it.
+
+## About super heroes
+
+[Janina](https://www.linkedin.com/in/janina-nemec-39875316a/) offered a session about Superheroes in your team or organization and also about why this harms. This was very interesting. Sadly I did find me sometimes more and sometimes less in such a superhero portrait - time to make a conscious effort and get rid of this. For example I really have to not only wait until someone says something in a refinement or planning, I do have to encourage people actively. I also should not be the one always taking care of production log alerts only because I'm usually the first one at work. And for sure, I should do much much more pairing and/or ensembles. 
+Also I will remind the team I'm working in to not have closed 1:1 conversations as long as they are not private. Every project related discussion should happen in a public channel to enable every team member to join, listen in or contribute.
+
+But not being a super hero may also need trust and respect. Which brings us to the main topic I want to write about.
+## Trust & Respect
+
+As mentioned in the introduction there was one recurring motive which was present in nearly all the sessions and a lot of the discussion and conversation I had: Trust and respect
+
+### At the conference level
+
+This started with the people attending the conference. There was no judgement, everybody respected each other, helped each other and far more importantly accepted each other as they are. This created a safe space and enabled sharing a lot of different stories. 
+
+The respect was shown in a lot of different ways. One way was to assume the persons you are talking to are professionals at what they do. Everybody was willing to explain, teach and even more important to listen. Another way this was reflected was to let other ones speak and let finish them speaking, maybe even raise your hand if you wanted to say something, to signal others you want to chime in. This worked great most of the times and helped to create a relaxed atmosphere.
+
+### In self care
+
+This great atmosphere let people to openly talk about mental health and impostor syndrome. I did not expect this. It was great. I did take part in a session about impostor syndrome which helped me to realize I'm not alone and also I do have it mostly under control. There were people sitting with much more experience and a much more confident appearance talking about similar feelings. This helped me a lot. 
+
+But why is this in the trust and respect section? If you are in an environment which is trusting and respecting you may find it much easier to deal with impostor syndrome or mental health issues. If you struggle with this kind of problems, maybe stop searching on your side but try to change the environment - yes this may imply leaving the company you are working and go somewhere else. At least for me, this is part of self care. Another part of self care is to trust your abilities and respect yourself. I know, that is easier said then done.
+
+### In Teaching
+
+We had one session about how to teach others and especially beginners. Besides some methodological things this boiled also down to trust and respect. As teachers we must make sure we have trust in the beginners and enable them to find their own path and also make their own mistakes. At the same time beginners have to trust their teachers to be protected from to wide reaching mistakes and to be encouraged to go their own path. Also we do have to respect our ideas and maybe even preferences.
+
+### In daily work
+Everybody knows we must trust each other to work as a team, right? But what happens if we don't? [Romeou](https://fr.linkedin.com/in/romeu) offered a fishbowl ensemble session with two saboteurs in the group allowing to experience this. The saboteurs had the task to make sure the ensemble gets nowhere without getting caught. This worked tremendously well for the saboteurs. One of them just did not do anything while the other did not make anything obvious.
+
+We did observe things like:
+
+* not wanting to add a voice to the discussion as your idea could be interpreted as a "bad" one
+* distrusting the ideas of others
+* discussion a lot without making any decisions
+* doubting there even is a saboteur - at the end I was convinced there was none
+* everybody was the saboteur for at least one other person
+
+This was especially enlightening as other ensemble sessions were quite productive. Take home message for me: Do everything you can to make the team you are in a highly trusted one. This starts by not blaming each other, assume everybody is doing the best to their knowledge, assume others may have good reasons to do thing differently and giving everyone a voice. Also you should make decisions as a team but at the same time realize when you are just running in circles - in this case you may just throw a coin.
+
+## In organizations
+
+I also did join a talk about "Leadership without Hierarchies" (sadly I forgot to write down the session host, if you know the name please let me know). While listening to this and during discussion it made me to realize a couple of things:
+
+* be careful with incentives on an individual level
+* maybe we should get rid of job titles like "senior" and "junior", as they imply a formal hierarchy
+* trust is important
+
+Why is trust important? Especially (mid level) management may have to envisioned not as a control instance (no trust) but as a supporting instance which trusts their subordinates to do their work and enable them to do their work.
+
+### In Security
+
+Obviously there cannot be any trust here. Simultaneously, we must trust other developers, companies, and our peers. This may lead to a feeling of anxiety, paranoia and helplessness. 
+
+We need a safe space where we can share experiences and teach each other. Thank you [Lisi](https://de.linkedin.com/in/lisihocke) and [Claudius](https://www.linkedin.com/in/claudius-link/) to provide one! One result from the "Painless Security" Workshop was we need to put a bit fun into security and security education. And how could we do this better than with a game? [Philipp](https://www.linkedin.com/in/philipp-zug-a892161b/) and me teamed up and talked an idea through, [Lisi](https://de.linkedin.com/in/lisihocke) joined in and we may have ourselves gotten into something. Let see what happens.
+
+## Conclusion 
+
+While I did not learn new crazy stuff about languages, paradigms or frameworks I did learn a lot about the endeavor of creating software together. I've also met a lot of really nice people. I also plan to take some ideas from the conference and implement them at work. For example, I want to engage in more ensembles, possibly host a Capture the Flag session, and reduce some of the alerts that we frequently ignore. Again, nothing brand new, nothing spectacular just some new insights and a lot of new energy to try stuff. 
+
+Talking about energy: The whole conference did gave me kind of an energy boost and at the end of the conference I was way more relaxed than I have thought. And for sure I will try to be at SoCraTes 2024.
+
+One thing which I did not write about: Kudos-Cards, we also practiced to say thank you. And with this I do want to thank my current employer [QualityMinds](https://qualityminds.com/) for paying my ticket and the travel. Thank you! 
+
+And also thank you for reading. If you want to contact me, feel free to find me on [LinkedIn](https://www.linkedin.com/in/martin-schmidt-74b9b727b/) or leave a comment.
