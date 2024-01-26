@@ -4,6 +4,8 @@ title:  "The semantics of Java Optional"
 date:   2023-04-12 13:14:49 +0100
 categories:
   - coding
+  - java
+  - model
 tags:
   - java
   - semantics

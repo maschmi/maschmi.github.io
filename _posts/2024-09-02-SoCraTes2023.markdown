@@ -3,7 +3,7 @@ layout: post
 title:  "SoCraTes Germany 2023"
 date:   2023-09-04 13:14:49 +0100
 categories:
-  - meta
+  - working
   - conference
 tags:
   - software development

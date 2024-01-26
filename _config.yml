@@ -17,22 +17,29 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-
-title: Maschmi's Blog
+name: Endavours in software stuff
+title: Endavours in software stuff
 email: maschmi@maschmi.net
 description: >- # this means to ignore newlines until "baseurl:"
-  Most, if not all of the post, will have to do somehing with software development. Except it to be a mixture between
+  Most, if not all of the post, will have to do somehing with software development. Expect it to be a mixture between
   techy stuff, meta stuff and the way we work.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://blog.maschmi.net" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  maschmi
+include: ["_pages"]
+permalink: /:title/
 
 # Build settings
-theme: minima
+remote_theme: wowthemesnet/mediumish-theme-jekyll
 plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
   - jekyll-remote-theme
-  - jekyll-gist
+
+
 lsi: false
 safe: true
 incremental: false
@@ -42,6 +49,10 @@ gist:
 kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
+
+# Pagination
+paginate: 6
+paginate_path: /page:num/
 
 # Exclude from processing.
 # The following items will not be processed, by default.

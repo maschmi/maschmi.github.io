@@ -2,9 +2,12 @@
 layout: post
 title:  "Why Sprint, when you can Hike?"
 date:   2023-09-12 13:14:49 +0100
+featured: true
+image: assets/images/hiking.jpg
 categories:
-  - meta
-  - team
+  - working
+  - agile
+  - culture
 tags:
   - how we work
   - agile
