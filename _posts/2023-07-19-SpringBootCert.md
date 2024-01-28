@@ -2,7 +2,7 @@
 layout: post
 title:  "Spring Certified Professional"
 date:   2023-07-19 13:14:49 +0100
-featured: true
+featured: false
 image: assets/images/springbootcert.png
 categories:
   - coding
