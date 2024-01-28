@@ -2,7 +2,7 @@
 layout: post
 title:  "The semantics of Java Optional"
 date:   2023-04-12 13:14:49 +0100
-image: assets/images/code2.png
+image: assets/images/javacode.png
 categories:
   - coding
   - java
