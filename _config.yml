@@ -44,9 +44,11 @@ lsi: false
 safe: true
 incremental: false
 highlighter: rouge
+markdown: kramdown
 gist:
   noscript: false
 kramdown:
+  input: GFM
   math_engine: mathjax
   syntax_highlighter: rouge
 
