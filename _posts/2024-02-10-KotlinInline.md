@@ -3,7 +3,7 @@ layout: post
 title:  "Inlined Kotlin"
 date:   2024-02-10 14:00:00 +0100
 featured: false
-image: assets/kotlin-inline/code.png
+image: assets/kotlin-inlined/code.png
 categories:
   - coding
   - kotlin
@@ -289,7 +289,7 @@ open class Benchmarks {
     }
 }
 ```
-As I said, I'm not a benchmarking expert. If you have some comments, write me a [mail](https://blog.maschmi.net/about) or contact me on [linkedin](https://www.linkedin.com/in/martin-schmidt-74b9b727b/).
+As I said, I'm not a benchmarking expert. If you have some comments, write me a [mail](https://blog.maschmi.net/about) or contact me on [LinkedIn](https://www.linkedin.com/in/martin-schmidt-74b9b727b/).
 The settings to run the benchmark were the default settings, measuring ops/s and doing 5 warmup iterations, 
 5 measurements iterations and 5 forks (25 measurements in total per benchmark).
 
