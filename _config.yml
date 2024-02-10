@@ -38,17 +38,20 @@ plugins:
   - jekyll-seo-tag
   - jekyll-archives
   - jekyll-remote-theme
-
+  - jekyll-relative-links
+  - kramdown
+  - kramdown-parser-gfm
+  - rouge
 
 lsi: false
 safe: true
+source: https://github.com/maschmi/maschmi.github.io
 incremental: false
 highlighter: rouge
 markdown: kramdown
 gist:
   noscript: false
 kramdown:
-  input: GFM
   math_engine: mathjax
   syntax_highlighter: rouge
 
