@@ -41,7 +41,7 @@ Now the data structure reflects there may or may not be a review comment. But th
 
 As Java goes it does not support NullSafety like e.g. Kotlin. Every object can be null. So what a developer can do when initializing the MoviewReview record is the following:
 
-```
+```java
 new MovieReview(null, 0, null) {}
 ```
 
@@ -49,7 +49,7 @@ Now our nice `Optional` is null and we will get a NullPointerException when we t
 
 ## Adding bean validation
 
-```
+```java
 public record MovieReview(
 @NotNull
 UUID movieId, 
@@ -75,14 +75,15 @@ When a data structure with an `Optional` is serialized you may loose information
 ### Internal borders - Method arguments
 
 Let's leave the example from above. Imagine you have a query function which wants to receive all reviews for a given movie after day X and optional before day Y.
-```
+
+```java
 public List<MovieReviews> findAllByDates(UUID movieId, LocalDate start, Optional<LocalDate> end) {
     // your implementation
 }
 ```
 Easy, right? Your `Optional` signals there may or may not be and end date set. But again a  develop can put `null` into the end field. This is the reason some static code analyzers will give you a warning for this method. It could be a better way to refactor it like this:
 
-```
+```java
 public List<MovieReviews> findAllAfter(UUID movieId, LocalDate start) {
 	return findAllByDatesImpl(movieId, start, Optional.empty();
 }
@@ -94,14 +95,17 @@ private List<MovieReviews> findAllByDatesImpl(UUID movieId, LocalDate start, Opt
    // your implementation
 }
 ```
+
 Of course, this depends on your code base and your intended customers of your API.
 
 ### Internal borders - Method return value
 
 A good use of `Optional` is to signal there may or may not be a return value of a method. 
-```
+
+```java
 Optional<Integer> findReviewScoreForMovie(UUID movieId)
 ```
+
 This signals the users of this API there may not be a review score associated with this movie. And they have to take care to do something with this. This could be as easy as serializing it to `null` when sending it out over the API or something more complex. But again, semantically we say: Expect it to be not present. And if so, this is intentional and not by some error.
 
 ## Conclusion

@@ -41,7 +41,7 @@ I wanted to solve an issue in the code at work which looks like the following:
 As I had to do not only one but many calls and wanted not to wrap each call into a try/catch-block
 of its own, I implemented a guard.
 
-```Kotlin
+```kotlin
 private fun <T> guard(guardedCall: () -> T): Result<T> {
     try {
         val result = guardedCall.invoke()
@@ -75,7 +75,7 @@ to check if we can live without the anonymous lambda and virtual calls.
 
 Time to inline the guard:
 
-```Kotlin
+```kotlin
 private inline fun <T> inlinedGuard(guardedCall: () -> T): Result<T> {
     try {
         val result = guardedCall.invoke()
@@ -88,7 +88,7 @@ private inline fun <T> inlinedGuard(guardedCall: () -> T): Result<T> {
 
 and use it like this:
 
-```Kotlin
+```kotlin
 fun functionOneUsingAdapter() {
     inlinedGuard {
         adapter.methodToBeGuarded("FunctionOne")
@@ -253,7 +253,7 @@ Out of curiosity, can we see performance differences? I'm not a benchmarking exp
 To do this, I removed all the print statements from the methods and let the functions using the guard return its result. The
 benchmarking code itself uses JMH () and looks like this:
 
-```Kotlin
+```kotlin
 @State(Scope.Benchmark)
 open class Benchmarks {
 
