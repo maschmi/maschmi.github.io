@@ -1,0 +1,235 @@
+// ================de/maschmi/blog/GuardInlined.class =================
+// class version 65.0 (65)
+// access flags 0x31
+public final class de/maschmi/blog/GuardInlined {
+
+  // compiled from: GuardInlined.kt
+  // debug info: SMAP
+GuardInlined.kt
+Kotlin
+*S Kotlin
+*F
++ 1 GuardInlined.kt
+de/maschmi/blog/GuardInlined
+*L
+1#1,27:1
+19#1,5:28
+19#1,5:33
+*S KotlinDebug
+*F
++ 1 GuardInlined.kt
+de/maschmi/blog/GuardInlined
+*L
+6#1:28,5
+13#1:33,5
+*E
+
+
+  @Lkotlin/Metadata;(mv={1, 9, 0}, k=1, d1={"\u0000&\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004J\u0019\u0010\u0005\u001a\u0008\u0012\u0004\u0012\u00020\u00070\u0006\u00f8\u0001\u0000\u00f8\u0001\u0001\u00a2\u0006\u0004\u0008\u0008\u0010\u0009J\u0019\u0010\n\u001a\u0008\u0012\u0004\u0012\u00020\u00070\u0006\u00f8\u0001\u0000\u00f8\u0001\u0001\u00a2\u0006\u0004\u0008\u000b\u0010\u0009J0\u0010\u000c\u001a\u0008\u0012\u0004\u0012\u0002H\r0\u0006\"\u0004\u0008\u0000\u0010\r2\u000c\u0010\u000e\u001a\u0008\u0012\u0004\u0012\u0002H\r0\u000fH\u0082\u0008\u00f8\u0001\u0000\u00f8\u0001\u0001\u00a2\u0006\u0004\u0008\u0010\u0010\u0011R\u000e\u0010\u0002\u001a\u00020\u0003X\u0082\u0004\u00a2\u0006\u0002\n\u0000\u0082\u0002\u000b\n\u0002\u0008!\n\u0005\u0008\u00a1\u001e0\u0001\u00a8\u0006\u0012"}, d2={"Lde/maschmi/blog/GuardInlined;", "", "adapter", "Lde/maschmi/blog/Adapter;", "(Lde/maschmi/blog/Adapter;)V", "functionOneUsingAdapter", "Lkotlin/Result;", "", "functionOneUsingAdapter-d1pmJ48", "()Ljava/lang/Object;", "functionTwoUsingAdapter", "functionTwoUsingAdapter-d1pmJ48", "inlinedGuard", "T", "guardedCall", "Lkotlin/Function0;", "inlinedGuard-IoAF18A", "(Lkotlin/jvm/functions/Function0;)Ljava/lang/Object;", "ktinline.main"})
+
+  @Lkotlin/jvm/internal/SourceDebugExtension;(value={"SMAP\nGuardInlined.kt\nKotlin\n*S Kotlin\n*F\n+ 1 GuardInlined.kt\nde/maschmi/blog/GuardInlined\n*L\n1#1,27:1\n19#1,5:28\n19#1,5:33\n*S KotlinDebug\n*F\n+ 1 GuardInlined.kt\nde/maschmi/blog/GuardInlined\n*L\n6#1:28,5\n13#1:33,5\n*E\n"}) // invisible
+
+  // access flags 0x12
+  private final Lde/maschmi/blog/Adapter; adapter
+
+  // access flags 0x11
+  public final functionOneUsingAdapter-d1pmJ48()Ljava/lang/Object;
+  @Lorg/jetbrains/annotations/NotNull;() // invisible
+    TRYCATCHBLOCK L0 L1 L1 java/lang/Exception
+   L2
+    LINENUMBER 6 L2
+    ALOAD 0
+    ASTORE 1
+   L3
+    ICONST_0
+    ISTORE 2
+   L0
+    LINENUMBER 28 L0
+    NOP
+   L4
+    LINENUMBER 29 L4
+    ICONST_0
+    ISTORE 3
+   L5
+    LINENUMBER 7 L5
+    ALOAD 0
+    GETFIELD de/maschmi/blog/GuardInlined.adapter : Lde/maschmi/blog/Adapter;
+    LDC "FunctionOne"
+    INVOKEVIRTUAL de/maschmi/blog/Adapter.methodToBeGuarded (Ljava/lang/String;)Ljava/lang/String;
+   L6
+    LINENUMBER 29 L6
+    ASTORE 4
+   L7
+    LINENUMBER 30 L7
+    GETSTATIC kotlin/Result.Companion : Lkotlin/Result$Companion;
+    ASTORE 3
+    ALOAD 4
+    INVOKESTATIC kotlin/Result.constructor-impl (Ljava/lang/Object;)Ljava/lang/Object;
+   L8
+    LINENUMBER 30 L8
+    GOTO L9
+   L1
+    LINENUMBER 31 L1
+   FRAME FULL [de/maschmi/blog/GuardInlined de/maschmi/blog/GuardInlined I] [java/lang/Exception]
+    ASTORE 4
+   L10
+    LINENUMBER 32 L10
+    GETSTATIC kotlin/Result.Companion : Lkotlin/Result$Companion;
+    ASTORE 3
+    ALOAD 4
+    CHECKCAST java/lang/Throwable
+    INVOKESTATIC kotlin/ResultKt.createFailure (Ljava/lang/Throwable;)Ljava/lang/Object;
+    INVOKESTATIC kotlin/Result.constructor-impl (Ljava/lang/Object;)Ljava/lang/Object;
+   L11
+    LINENUMBER 32 L11
+    NOP
+   L9
+    LINENUMBER 6 L9
+   FRAME FULL [de/maschmi/blog/GuardInlined de/maschmi/blog/GuardInlined I kotlin/Result$Companion java/lang/Object] [java/lang/Object]
+    ARETURN
+   L12
+    LOCALVARIABLE $i$a$-inlinedGuard-GuardInlined$functionOneUsingAdapter$1 I L5 L6 3
+    LOCALVARIABLE result$iv Ljava/lang/Object; L7 L1 4
+    LOCALVARIABLE ex$iv Ljava/lang/Exception; L10 L9 4
+    LOCALVARIABLE this_$iv Lde/maschmi/blog/GuardInlined; L3 L9 1
+    LOCALVARIABLE $i$f$inlinedGuard-IoAF18A I L0 L9 2
+    LOCALVARIABLE this Lde/maschmi/blog/GuardInlined; L2 L12 0
+    MAXSTACK = 2
+    MAXLOCALS = 5
+
+  // access flags 0x11
+  public final functionTwoUsingAdapter-d1pmJ48()Ljava/lang/Object;
+  @Lorg/jetbrains/annotations/NotNull;() // invisible
+    TRYCATCHBLOCK L0 L1 L1 java/lang/Exception
+   L2
+    LINENUMBER 13 L2
+    ALOAD 0
+    ASTORE 1
+   L3
+    ICONST_0
+    ISTORE 2
+   L0
+    LINENUMBER 33 L0
+    NOP
+   L4
+    LINENUMBER 34 L4
+    ICONST_0
+    ISTORE 3
+   L5
+    LINENUMBER 14 L5
+    ALOAD 0
+    GETFIELD de/maschmi/blog/GuardInlined.adapter : Lde/maschmi/blog/Adapter;
+    LDC "FunctionTwo"
+    INVOKEVIRTUAL de/maschmi/blog/Adapter.methodToBeGuarded (Ljava/lang/String;)Ljava/lang/String;
+   L6
+    LINENUMBER 34 L6
+    ASTORE 4
+   L7
+    LINENUMBER 35 L7
+    GETSTATIC kotlin/Result.Companion : Lkotlin/Result$Companion;
+    ASTORE 3
+    ALOAD 4
+    INVOKESTATIC kotlin/Result.constructor-impl (Ljava/lang/Object;)Ljava/lang/Object;
+   L8
+    LINENUMBER 35 L8
+    GOTO L9
+   L1
+    LINENUMBER 36 L1
+   FRAME FULL [de/maschmi/blog/GuardInlined de/maschmi/blog/GuardInlined I] [java/lang/Exception]
+    ASTORE 4
+   L10
+    LINENUMBER 37 L10
+    GETSTATIC kotlin/Result.Companion : Lkotlin/Result$Companion;
+    ASTORE 3
+    ALOAD 4
+    CHECKCAST java/lang/Throwable
+    INVOKESTATIC kotlin/ResultKt.createFailure (Ljava/lang/Throwable;)Ljava/lang/Object;
+    INVOKESTATIC kotlin/Result.constructor-impl (Ljava/lang/Object;)Ljava/lang/Object;
+   L11
+    LINENUMBER 37 L11
+    NOP
+   L9
+    LINENUMBER 13 L9
+   FRAME FULL [de/maschmi/blog/GuardInlined de/maschmi/blog/GuardInlined I kotlin/Result$Companion java/lang/Object] [java/lang/Object]
+    ARETURN
+   L12
+    LOCALVARIABLE $i$a$-inlinedGuard-GuardInlined$functionTwoUsingAdapter$1 I L5 L6 3
+    LOCALVARIABLE result$iv Ljava/lang/Object; L7 L1 4
+    LOCALVARIABLE ex$iv Ljava/lang/Exception; L10 L9 4
+    LOCALVARIABLE this_$iv Lde/maschmi/blog/GuardInlined; L3 L9 1
+    LOCALVARIABLE $i$f$inlinedGuard-IoAF18A I L0 L9 2
+    LOCALVARIABLE this Lde/maschmi/blog/GuardInlined; L2 L12 0
+    MAXSTACK = 2
+    MAXLOCALS = 5
+
+  // access flags 0x12
+  // signature <T:Ljava/lang/Object;>(Lkotlin/jvm/functions/Function0<+TT;>;)Ljava/lang/Object;
+  // declaration:  inlinedGuard-IoAF18A<T>(kotlin.jvm.functions.Function0<? extends T>)
+  private final inlinedGuard-IoAF18A(Lkotlin/jvm/functions/Function0;)Ljava/lang/Object;
+    TRYCATCHBLOCK L0 L1 L1 java/lang/Exception
+   L2
+    LDC 0
+    ISTORE 2
+   L0
+    LINENUMBER 19 L0
+    NOP
+   L3
+    LINENUMBER 20 L3
+    ALOAD 1
+    INVOKEINTERFACE kotlin/jvm/functions/Function0.invoke ()Ljava/lang/Object; (itf)
+    ASTORE 3
+   L4
+    LINENUMBER 21 L4
+    GETSTATIC kotlin/Result.Companion : Lkotlin/Result$Companion;
+    ASTORE 4
+    ALOAD 3
+    INVOKESTATIC kotlin/Result.constructor-impl (Ljava/lang/Object;)Ljava/lang/Object;
+   L5
+    LINENUMBER 21 L5
+    ARETURN
+   L1
+    LINENUMBER 22 L1
+   FRAME FULL [de/maschmi/blog/GuardInlined kotlin/jvm/functions/Function0 I] [java/lang/Exception]
+    ASTORE 3
+   L6
+    LINENUMBER 23 L6
+    GETSTATIC kotlin/Result.Companion : Lkotlin/Result$Companion;
+    ASTORE 4
+    ALOAD 3
+    CHECKCAST java/lang/Throwable
+    INVOKESTATIC kotlin/ResultKt.createFailure (Ljava/lang/Throwable;)Ljava/lang/Object;
+    INVOKESTATIC kotlin/Result.constructor-impl (Ljava/lang/Object;)Ljava/lang/Object;
+   L7
+    LINENUMBER 23 L7
+    ARETURN
+   L8
+    LOCALVARIABLE result Ljava/lang/Object; L4 L1 3
+    LOCALVARIABLE ex Ljava/lang/Exception; L6 L8 3
+    LOCALVARIABLE this Lde/maschmi/blog/GuardInlined; L2 L8 0
+    LOCALVARIABLE guardedCall Lkotlin/jvm/functions/Function0; L2 L8 1
+    LOCALVARIABLE $i$f$inlinedGuard-IoAF18A I L0 L8 2
+    MAXSTACK = 1
+    MAXLOCALS = 5
+
+  // access flags 0x1
+  public <init>(Lde/maschmi/blog/Adapter;)V
+    // annotable parameter count: 1 (invisible)
+    @Lorg/jetbrains/annotations/NotNull;() // invisible, parameter 0
+   L0
+    ALOAD 1
+    LDC "adapter"
+    INVOKESTATIC kotlin/jvm/internal/Intrinsics.checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V
+   L1
+    LINENUMBER 3 L1
+    ALOAD 0
+    INVOKESPECIAL java/lang/Object.<init> ()V
+    ALOAD 0
+    ALOAD 1
+    PUTFIELD de/maschmi/blog/GuardInlined.adapter : Lde/maschmi/blog/Adapter;
+    RETURN
+   L2
+    LOCALVARIABLE this Lde/maschmi/blog/GuardInlined; L0 L2 0
+    LOCALVARIABLE adapter Lde/maschmi/blog/Adapter; L0 L2 1
+    MAXSTACK = 2
+    MAXLOCALS = 2
+}
