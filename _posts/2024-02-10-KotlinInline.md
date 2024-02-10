@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Inlined Kotlin"
+title:  "Kotlin: Inline"
 date:   2024-02-10 14:00:00 +0100
 featured: false
 image: assets/kotlin-inlined/code.png
@@ -13,8 +13,6 @@ tags:
   - bytecode
   - benchmark
 ---
-
-# Inlined Kotlin
 
 At work, we started a new project using Kotlin instead of Java to write SpringBoot code. This makes me
 a rather happy developer. While the switch from writing and reading Java to writing and reading Kotlin
@@ -61,7 +59,7 @@ calling function can still decide how to proceed with an error or a success.
 
 The calling method may look something like this:
 
-```Kotlin
+```kotlin
 fun functionOneUsingAdapter() {
     guard {
         adapter.methodToBeGuarded("FunctionOne")
