@@ -251,7 +251,7 @@ case when the inline function is in the same class as the functions using it. I 
 
 Out of curiosity, can we see performance differences? I'm not a benchmarking expert. But let's give it a go.
 To do this, I removed all the print statements from the methods and let the functions using the guard return its result. The
-benchmarking code itself uses JMH () and looks like this:
+benchmarking code itself uses [JMH](https://github.com/openjdk/jmh) and looks like this:
 
 ```kotlin
 @State(Scope.Benchmark)
