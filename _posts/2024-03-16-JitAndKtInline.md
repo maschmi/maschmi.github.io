@@ -120,7 +120,7 @@ and
 ```
 
 for the not inlined guards. I've put both methods into a compare tool, beside some extra lines du to annotations, and of course
-the instruction addresses they are identical! No wonder there were no differences! By the way, you do not have to trust me
+the instruction addresses they are identical! No wonder there were no differences! By the way, you do not have to trust me,
 you can [download the whole assembly code](../assets/jit-inline/assembly.asm).
 
 I must say I'm quite impressed by the JIT. This somehow poses the question when to inline and when not? For hot methods it may not
