@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Inline or rely on the JIT"
-date:   2024-02-18 11:00:00 +0100
+date:   2024-03-16 11:00:00 +0100
 featured: false
 image: assets/jit-inline/chain-guard-inlined.png
 categories:
