@@ -108,4 +108,10 @@ In theory, you will have the opportunity to edit cards before saving them. This 
 
 ## Found and Issue, want to contribute?
 
-Just head over to the [GitHub project](https://github.com/Security-Card-Game/seccardgamecli) and either file an issue, fix one, open a PR or comment. 
+Just head over to the [GitHub project](https://github.com/Security-Card-Game/seccardgamecli) and either file an issue, fix one, open a PR or comment.
+
+## Resources
+
+* [Why the game is created and how it all began](https://blog.maschmi.net/seccardgame/)
+* [A simple UI and CLI for playing and creating card](https://github.com/Security-Card-Game/seccardgamecli)
+* [A repo full of cards](https://github.com/Security-Card-Game/securityDeckGame)

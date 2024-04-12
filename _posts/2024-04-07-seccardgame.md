@@ -98,3 +98,9 @@ in more detail.
 Did this spark your interest? If so, feel free to head over to GitHub for the [cards](https://github.com/Security-Card-Game/securityDeckGame) and  
  for the [game](https://github.com/Security-Card-Game/seccardgamecli). They are completely open source we will be happy
 to gather some Oopsies from you.
+
+## Resources
+
+* [How to play the game in its very early stage and how to contribute cards](https://blog.maschmi.net/seccardgame-play/)
+* [A simple UI and CLI for playing and creating card](https://github.com/Security-Card-Game/seccardgamecli)
+* [A repo full of cards](https://github.com/Security-Card-Game/securityDeckGame)
