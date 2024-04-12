@@ -26,7 +26,7 @@ later it has progressed far enough to write about it. And here we are.
 
 ![First draft](../assets/seccardgame/first-draft.jpg)
 
-In the picture above you can see the first idea we came up during lunch on the last day of the
+In the picture above, you can see the first idea we came up during lunch on the last day of the
 conference. The idea was and is to create a game in which we all can share our security oopsies, while
 keeping it fun. We wanted a game in which we learn from each other and maybe even create some empathy for
 different roles in a project. And we also wanted to create a game were you, as a group, need to defeat the
@@ -35,20 +35,20 @@ game.
 ### The context
 
 Imagine you are part of a team working in any company. Your team works in the software development
-department. During your development process you most certainly will create some security issues, 
+department. During your development process, you most certainly will create some security issues, 
 either in your software or someone else in the company will. We call them Ooopsie. Other events may happen, you may
-get lucky with some things and of course there will be attacks on you. Your job is to not let turn too many
+get lucky with some things, and of course there will be attacks on you. Your job is to not let turn too many
 attacks into incidents - or at least not in incidents killing your business. Did I mention you 
 need to take care of your resources as well?
 
 ### The Roles
 
-Ideally you are at least three players. One of you will have a C-level role and may decide how they
+Ideally, you are at least three players. One of you will have a C-level role and may decide how they
 send resources down to the 'workers', may have the last word in a decision or micromanage all the decisions
 the team takes. It is totally up to you. These are roles you can see in the picture above.
 
 But that is not all. Only because you would fill a role in a specific way the game may give you a **trait** you
-have to play. E.g. you are forced as a C-level to only allow a certain number of resources allocated to the
+have to play. E.g., you are forced as a C-level to only allow a certain number of resources allocated to the
 'workers'. Or as a 'worker' you may be an inside threat actor leading everybody astray.
 
 ### The Game
@@ -74,7 +74,7 @@ We played the game a couple of times now. And we have some preliminary rules rea
 1. Collect your resources for the round
 2. Draw a card openly
    * Event, Oopsies and Lucky cards are kept on the board
-   * Attack cards are evaluate, if there is a matching target the attack strikes. However, there may be cards allowing you to stop the attack immediately.
+   * Attack cards are evaluated, if there is a matching target the attack strikes. However, there may be cards allowing you to stop the attack immediately.
 3. Close Oopsies
    * Each Oopsie has a range of fix cost, you need to randomly determine a number in this range
    * You must take into account modifying cards which are open
@@ -85,16 +85,16 @@ We played the game a couple of times now. And we have some preliminary rules rea
  
 There is a tooling to create cards via a CLI and also to start a GUI for a game with the same tooling. Currently,
 the tooling requires one of you to share the screen if you play remotely. It is by far not finished and will need
-you to treat it as a physical card game with some automations. E.g. Attack durations are decreased round by round,
-resource costs to fix an Oopsie will be determined on closing automatically and in theory every card
-modify fix costs is considered in the costs as well. Maybe you also could use a timer after which the round
-has ended, and you must start the next one - the world turns even while you try to consider what to do next.
+you to treat it as a physical card game with some automation. E.g., Attack durations are decreased round by round,
+resource costs to fix an Oopsie will be determined on closing automatically, and in theory, every card
+modify fix cost is considered in the costs as well. Maybe you also could use a timer after which the round
+has ended, and you must start the next one — the world turns even while you try to consider what to do next.
 
 Head over to this [article](https://blog.maschmi.net/seccardgame-play/) to read about the tooling and how to play
 in more detail.
 
 ## Interested?
 
-Did this spark your interest? If so, feel free to head over to github for the [cards](https://github.com/Security-Card-Game/securityDeckGame) and  
-for [game](https://github.com/Security-Card-Game/seccardgamecli). They are completely open source we will be happy
+Did this spark your interest? If so, feel free to head over to GitHub for the [cards](https://github.com/Security-Card-Game/securityDeckGame) and  
+ for the [game](https://github.com/Security-Card-Game/seccardgamecli). They are completely open source we will be happy
 to gather some Oopsies from you.
