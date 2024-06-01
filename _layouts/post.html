@@ -87,7 +87,7 @@ post_class: post-template
             <!-- Post Date -->
             <p>
                 <small>
-                    <span class="post-date"><time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time></span>           
+                    <span class="post-date"><time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time></span>
                 {% if page.last_modified_at %}
                 (Updated: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>)
                 {% endif %}
@@ -132,49 +132,38 @@ post_class: post-template
             </div>
             <!-- End Categories -->
 
+         <!-- Begin Comments
+         ================================================== -->
+            <script src="https://giscus.app/client.js"
+                data-repo="maschmi/maschmi.github.io"
+                data-repo-id="R_kgDOLJ8Sow"
+                data-category="Announcements"
+                data-category-id="DIC_kwDOLJ8So84CfyKF"
+                data-mapping="pathname"
+                data-strict="0"
+                data-reactions-enabled="1"
+                data-emit-metadata="0"
+                data-input-position="top"
+                data-theme="light_tritanopia"
+                data-lang="en"
+                data-loading="lazy"
+                crossorigin="anonymous"
+                async>
+            </script>
+            <noscript>Please enable JavaScript to view the comments.</noscript>
+        </div>
+        <!-- End Comments
+        ================================================== -->
         </div>
         <!-- End Post -->
 
     </div>
-</div>
 <!-- End Article
 ================================================== -->
 
-<!-- Begin Comments
-================================================== -->
-<div class="col-md-9">
-<script src="https://giscus.app/client.js"
-    data-repo="maschmi/maschmi.github.io"
-    data-repo-id="R_kgDOLJ8Sow"
-    data-category="Announcements"
-    data-category-id="DIC_kwDOLJ8So84CfyKF"
-    data-mapping="pathname"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="top"
-    data-theme="light_tritanopia"
-    data-lang="en"
-    data-loading="lazy"
-    crossorigin="anonymous"
-    async>
-</script>
-<noscript>Please enable JavaScript to view the comments.</noscript>
-</div>>
-<!--
-{% if page.comments != false %}
-    <div class="container">
-        <div id="comments" class="row justify-content-center mb-5">
-            <div class="col-md-8">
-                {% include disqus.html %}
-            </div>
-        </div>
-    </div>
-{% endif %}
-End Comments
-================================================== -->
 
-<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first:
 https://search.google.com/structured-data/testing-tool/u/0/
 ================================================== -->
 {% if page.rating %}
