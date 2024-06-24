@@ -5,15 +5,13 @@ date: 2024-06-24 21:00:00 +0200
 featured: false
 image: assets/google-sec/img.png
 categories:
-- course
-- security
-  tags:
-- course
-- security
-- entry-level
+  - course
+  - security
+tags:
+  - course
+  - security
+  - entry-level
 ---
-
-## Why?
 
 One of the areas I want to get a better background and also want to focus more is security. This not only means securing 
 an application while developing it, but also while running it. If I have to put a label on this, it may be DevSecOps. But I'm
