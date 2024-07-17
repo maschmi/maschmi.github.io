@@ -9,7 +9,7 @@ categories:
   - spring-boot
 tags:
   - auto-configuration
-  - lims
+  - lims-team
   - gradle
 ---
 
@@ -22,7 +22,7 @@ implementing a reference service for the storage module. You can find the code f
 
 The team was rather happy having a small storage module ready and tested. They had the requirement to keep the implementation
 of the persistence layer abstract. Now they think about creating a small reference implementation consisting of a small
-backend service with an HTTP API (maybe fully RESTful, maybe not) and a postgres database as storage. Ab bit into the discussion, 
+backend service with an HTTP API (maybe fully RESTful, maybe not) and a postgres database as storage. A bit into the discussion, 
 they have come up with a lot of different ways to do this. They could use ktor, Quarkus or Spring Boot. They could add extra modules
 for web boundary and for persistence boundary implementations. They could put all into one module. They could try to keep their business
 logic module as clean of framework code as possible. 
