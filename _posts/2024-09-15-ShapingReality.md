@@ -96,7 +96,7 @@ technical details to worry about." I know this feeling. And yet I disagree. I do
 ask you to voice your concerns and share your insights. Maybe they are heard. Maybe not. Personally, I sleep more sound if I voiced them. And yet, often enough
 I do not have the energy to do so. Or I am in a hurry and forget it. Or the company/team culture does not fit (this then becomes a complete other topic).
 
-I also see a problem in fixed-price and fixed-feature set projects. The client has already made up their mind. Contracts are agrred upon and the team
+I also see a problem in fixed-price and fixed-feature set projects. The client has already made up their mind. Contracts are agreed upon and the team
 may be more or less hampered by time and budget constraints. Then there is no time to ask ourselves how the software or the model may impact reality. Maybe there is not
 even the chance to talk to the business anymore, even about simple ideas how to shape a better reality.
 
