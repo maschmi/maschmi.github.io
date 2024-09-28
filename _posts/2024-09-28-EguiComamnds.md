@@ -2,7 +2,7 @@
 layout: post
 title: "Rust, Egui and Commands"
 date: 2024-09-28 10:00:49 +0200
-image: assets/images/code2.png
+image: assets/egui_cmd/img.png
 categories:
   - rust
   - equi
@@ -13,45 +13,45 @@ tags:
   - test
 ---
 
-For a side project, the (security card game)[https://blog.maschmi.net/seccardgame/], I decided last year to write a
+For a side project, the [security card game](https://blog.maschmi.net/seccardgame/), I decided last year to write a
 simple CLI in rust to create cards. Soon after the CLI was finished, it became clear we could need a simple GUI to
-play the game and test out mechanics. Having already the basic code already in Rust, I have decided to give Rust a chance and look for a simple
-UI library. My choice felt on (egui)[https://github.com/emilk/egui], an easy to use immediate mode UI. I must admit it is 
-easy to use. With not much development time, we were able to try out the game by sharing a screen in a video call. However,
-there were (are) basically not tests. While the game rule engine now has test, the UI has none. With a bit of time on my hands, 
-I started to think about the reasons. This article will talk about one reason, and how this can be fixed.
+play the game and test out mechanics. Having already a code base in Rust, I decided to give Rust a chance and look for a simple
+GUI library. My choice was [egui](https://github.com/emilk/egui), an easy to use immediate mode GUI. With not much development time, 
+we were able to try out the game by sharing a screen in a video call. However, there were (are) basically not tests. While 
+the game rule engine now has test, the UI has none. With a bit of time on my hands, I started to think about the reasons. This article will talk about one reason, and how this can be fixed.
 
-You will find code examples in [here](https://github.com/maschmi/egui_command_pattern). There are also code snippets
-and throughout the article.
+You will find the whole code for this article in this [repository](https://github.com/maschmi/egui_command_pattern). There are also code snippets
+and links throughout the article.
 
 ## Disclaimer
 
-I am not a professional rust developer and neither an expert in egui. If you find some wrong or strange ideas in this
-article, or disagree, please get in [touch with me](https://blog.maschmi.net/about). And if you find this helpful, I appreciate
-if you share this idea. Generally, I am happy to receive feedback.
+I am not a professional rust developer and also not an expert in egui. If you find some wrong or strange ideas in this
+article, or simply disagree, please get in [touch with me](https://blog.maschmi.net/about). And if you find this helpful, 
+I appreciate if you share this idea. Generally, I am happy to receive feedback.
 
-Also, while this pattern is nothing fancy, I did never seen it written down for rust and egui.
+Also, while this pattern is nothing fancy, I did never see it written down for rust and egui.
 
 ## EGUI
 
 Let us start with some basics about egui. Egui is an [immediate mode UI](https://en.wikipedia.org/wiki/Immediate_mode_(computer_graphics)#Immediate_mode_GUI), which means
 we specify all the UI elements in the update loop together with their values. A retained mode GUI would need us to store a reference to an UI element and then call a method
-on this UI element ot update its value. You can read about the pros and cons in the [egui readme](https://github.com/emilk/egui?tab=readme-ov-file#why-immediate-mode). For us
+on this UI element to update its value. You can read about the pros and cons in the [egui readme](https://github.com/emilk/egui?tab=readme-ov-file#why-immediate-mode). For us
 it is important to remember the following facts:
 
-* we have a thread which draws the UI every frame — we should not block this
-* we have one update function in which we define the GUI
-* as long as the frame rate is high enough, we most likely do not have to force a re-draw when the user clicks a button
+* we have a single thread which draws the UI every frame — we should not block this
+* we have one update function in which we define the GUI and its state
+* the update function is called and run for every frame inside this single thread
 
 ## Basics and State
 
 ![GUI](../assets/egui_cmd/img.png)
 
-We can start using the [eframe template](https://github.com/emilk/eframe_template) which gives us a small app on which we can
-start to build on. As this is not a tutorial, I will not go over the changes I made step by step. In short, I have changed a label,
+We can start using the [eframe template](https://github.com/emilk/eframe_template) which gives us a small app on which we can build on. As this 
+is not a tutorial, I will not go over the changes I made step by step. In short, I have changed a label, 
 added a `Check` button and a place to display the result. I have also added a button to create a new window inside the main window. 
 The implementation is not very robust and certainly not an optimal one, but it will help to understand the point I am going to make.
-Can you spot the issue with the window IDs in the [code](https://github.com/maschmi/egui_command_pattern/blob/main/src/app.rs)[Hint](#window-id-hint)?
+Can you spot the issue with the window IDs in the [code](https://github.com/maschmi/egui_command_pattern/blob/main/src/app.rs) ([Hint](#window-id-hint))?
+Also, the text input is way too big.
 
 The main function inside `main.rs` calls
 
@@ -88,7 +88,7 @@ impl eframe::App for CommandPatternApp {
 }
 ```
 
-it becomes clear, that this `CommandPatternApp`struct holds the state of the application. This also means, every time
+it becomes clear, that this `CommandPatternApp` struct holds the state of the application. This also means, every time
 a user interacts with a control, e.g. enters text, we need to update the state which then will be used in the next iteration
 to draw the updated GUI.
 
@@ -112,16 +112,16 @@ add a button with a click handling. When the button is clicked we update the `co
 to print a label underneath this row.
 
 This is really, straightforward. Right? However, this is also a bit of a problem. While one can debate if and how we should test
-the binding of `self.label` to the text edit field, we should certainly be able to write test our validation logic determining if 
+the binding of `self.label` to the text edit field, we should certainly be able to write tests for our validation logic determining if 
 our answer is correct or not.
 
-One simple solution would be to move this line in to its own function and then write a test for it. However, then you will still have
+One simple solution would be to move this line in to its own function and then write a test for it. However, then you will have
 multiple places in your code which are called when a user interacts. Also, there is nothing convening the intent of the user interaction.
 
 ## Commands
 
-I do not like to have multiple places where, similar functions are called. Maybe when a project grows, the same logic is implemented
-multiple times. I also do not like to have to know where to look for user interaction handling code. It could be all over the place. And it
+I do not like to have similar, code at multiple places without a need. Also, when a project grows, the same logic even may be implemented
+multiple times at multiple places without a necessity. I also do not like to have to know where to look for user interaction handling code. It could be all over the place. And it
 also may not convey a semantic meaning. Can we make this more self-documenting and clearer?
 
 How about using something like [this](https://github.com/maschmi/egui_command_pattern/blob/command_callback/src/command_handler.rs) 
@@ -210,25 +210,25 @@ fn draw_windows(&mut self, ctx: &Context) {
 ```
 
 This callback closure captures a mutable borrow to self and is itself borrowed mutably by each window. Be aware, we still only
-have one mutable borrow of self in the scope of the `draw_windows` functions. And also be aware, we are in a single threaded 
-environment. And do not change the order of cloning the `windows` vector and creating the callback. The borrow checker will
-not like it.
+have one mutable borrow of self in the scope of the `draw_windows` function. Also, each mutable borrow of the callback is happening
+inside an own scope (iteration) of the loop. As we are in a single threaded 
+environment, we do not think about mutexes. By the way, do not change the order of cloning the `windows` vector and creating 
+the callback. The borrow checker will not like it.
 
-While we now have only on place where we handle the commands, we can take advantage of egui being an immediate mode UI and
+While we now have only one place where we handle the commands, we can take advantage of egui being an immediate mode UI and
 also knowing we only have one thread.
 
 ## One call to rule them all
 
-As long as our frame rate is high, and our users are not clicking very fast, we can simplify even more. How about putting the
-command handling at a single place in the lifecycle of a frame? How about putting it directly at the beginning of the update loop.
-And how about also putting not the complete window content into the app state but only the values we need?
+How about putting the command handling at a single place in the lifecycle of a frame? How about putting it directly at 
+the beginning of the update loop. And how about also putting not the complete window content into the app state but 
+only the values we need?
 
 This [commit](https://github.com/maschmi/egui_command_pattern/commit/e7841ec283773282dc7ec46a6429d21e142a917f) changes the
 `CreateWindowCommand` to only getting the window id and moves the content creation into the loop inside the `draw_windows` function. It
-also fixes the issue with the window ids.
+also fixes the issue with the window IDs. To be frank, moving the content creation inside the loop is not strictly needed for this example.
 
-But how about putting the command handling call into one place? Well, assuming we have a high enough frame rate (one update iteration does
-not take too long) and knowing we only have one single thread, we can modify our state to hold a
+But how about putting the command handling call into one place? Well, knowing we only have one single thread, we can modify our state to hold a
 
 ```rust
 pub struct CommandPatternApp {
@@ -237,7 +237,7 @@ pub struct CommandPatternApp {
 }
 ```
 
-`cmd_to_run` field which is read as first instruction of the update loop
+`cmd_to_run` field which is read and handled as first instruction of the update loop
 
 ```rust
 if let Some(cmd) = &self.cmd_to_run {
@@ -252,13 +252,13 @@ first implementation where the state mutation was done in place and all over the
 ## Conclusion
 
 We have seen three possible ways to handle state changes on user interaction inside egui. The first one, performing the state
-change directly where the element (e.g., button) is defined works well but is not easily testable nor conveys intent. The second patter
-introduced Commands, creates them when a user interacts with an element and then calls a function to handle the commands. This centralizes
-the state change, decouples it from the element definition, conveys intent and makes the intended stat change easily testable. We also have seen how to
+change directly where the element (e.g., button) is defined works well but is not easily testable nor conveys intent. The second possibility introduced Commands, 
+creates them when a user interacts with an element and then calls a function to handle the commands. This centralizes
+the state change, decouples it from the element definition, conveys intent and makes the intended state change easily testable. We also have seen how to
 supply this `hanlde_command` function as a callback to function outside the `CommandPatternApp` implementation.
 Last but not least, we centralized the place where the `handle_command` function is called to a single place in the application.
 
-Both, the second pattern and the third pattern convey intent and make the state change followed by a user interaction easily testable. Personally, I favor
+Both, the second and the third pattern convey intent and make the state change followed by a user interaction easily testable. Personally, I favor
 the third method over the second as we then only have a single place changing the state. However, this may result in issues when
 a user happens to trigger two commands during one update iteration (e.g. low frame rate or long-running commands). We could then work with a vector of commands 
 instead of a single field or start to force a redrawing when a user interacts with an element. However, I feel these are issues not of the shown patterns but more
@@ -273,10 +273,11 @@ You can find all the code in this [repository](https://github.com/maschmi/egui_c
 * [non_self_windows](https://github.com/maschmi/egui_command_pattern/tree/non_self_windows) the code where the windows are not created in an instance method
 * [one_call_to_rule_them_all](https://github.com/maschmi/egui_command_pattern/tree/one_call_to_rule_them_all) the code where we call the command handling at one place only
 
-Tests are only included int the [one_call_to_rule_them_all](https://github.com/maschmi/egui_command_pattern/tree/one_call_to_rule_them_all) branch.
+Tests are only included int the [one_call_to_rule_them_all](https://github.com/maschmi/egui_command_pattern/blob/one_call_to_rule_them_all/src/command_handler.rs) branch.
 
 ### Window Id Hint
 
-Crate two new windows and close the one with ID 0. Then create another one and count the windows.
+Create two new windows and close the one with ID 0. Then create another one and count the windows. If running in debug mode,
+try to move the new window.
 
 
