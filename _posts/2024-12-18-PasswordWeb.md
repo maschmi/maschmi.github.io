@@ -52,7 +52,7 @@ We can roughly group the data by its state:
 Of course, different steps could be divided further. And, at least for me, the borders between these groups can sometimes be a bit fuzzy.
 But for our purpose, this is good enough. But enough of definitions, let's look at what we can do to protect the users' password.
 
-## Threats: For what do we want to protect?
+## Threats: From what do we want to protect?
 
 ### Data in Use: User enters the password
 
