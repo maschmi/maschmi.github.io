@@ -26,7 +26,7 @@ I will not write how to hash it, use a salt and a slow hashing function and read
 ## Tl;DR
 
 Always hash a user supplied password with a slow, strong hashing algorithm and salt the hash. Never ever, store this supplied password
-as it is in your database. Even if the password is not clear text or already hashed.
+as it is in your database. Even if the password is not clear text or already hashed. And also always make sure to use TLS to submit data.
 
 ## Data flow
 
