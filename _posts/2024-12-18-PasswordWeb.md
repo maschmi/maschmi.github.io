@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Where and why to hash a password"
-date: 2024-18-12 15:00:49 +0200
+date: 2024-12-18 15:00:49 +0200
 image: assets/images/passwords.webp
 categories:
   - web
@@ -21,7 +21,8 @@ feeling; my inner eye envisioned the MD5 hash stored in the database. I didn’t
 But now this overheard chat triggered me to think of it again. And made me decide to write my own piece on where and why 
 you should hash a password. I will write with a web application in mind. The article is mostly to help me bring structure in my brain and
 to reference it to other persons when needed. If you find an error or disagree, please tell me. 
-I will not write how to hash it, use a salt and a slow hashing function and read the documentation of whatever framework you’re using. Or search for "password hashing".
+I will not write how to hash it, use a salt and a slow hashing function and read the documentation of whatever framework you’re using. Or search for "password hashing". Or look at this [OWASP Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)
+about password storage.
 
 ## Tl;DR
 
