@@ -8,6 +8,7 @@ categories:
   - course
   - security
 tags:
+  - certificate
   - course
   - security
   - entry-level
