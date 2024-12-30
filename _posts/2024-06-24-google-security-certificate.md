@@ -7,6 +7,7 @@ image: assets/google-sec/img.png
 categories:
   - course
   - security
+  - certificate
 tags:
   - certificate
   - course

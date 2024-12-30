@@ -8,6 +8,7 @@ categories:
   - coding
   - springboot
   - learning
+  - certificate
 tags:
   - certificate
   - learning
