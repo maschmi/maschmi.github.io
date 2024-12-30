@@ -9,6 +9,7 @@ categories:
   - springboot
   - learning
 tags:
+  - certificate
   - learning
   - springboot
   - wording
