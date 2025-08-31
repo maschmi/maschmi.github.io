@@ -72,7 +72,16 @@ ga('send', 'pageview');
                 </li>
 
                 <li class="nav-item">
+                {% if page.url == "/about" %}
+                <li class="nav-item active">
+                {% else %}
+                <li class="nav-item">
+                {% endif %}
                 <a class="nav-link" href="{{ site.baseurl }}/about">About</a>
+                </li>
+                
+                <li class="nav-item">
+                <a class="nav-link" href="https://maschmi.net/git-training/index.html">Git Training</a>
                 </li>
 
                 {% include search-lunr.html %}
