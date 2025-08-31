@@ -24,8 +24,6 @@ And now in this article.
 
 ## Onion Architecture
 
-![Onion architecture](../assets/rotten_onion/onion.png)
-
 Let me set the stage.
 Since a few years I try to use domain-drive-design in projects. 
 Not in every project, but in the ones that lend themselves to it.
@@ -49,6 +47,8 @@ The ACL will have to do the work and be adapted to the changes.
 You can evolve different parts of your application much easier.
 Just make sure they do not grow too much apart.
 Neither by code nor by naming.
+
+![Onion architecture](../assets/rotten_onion/onion.png)
 
 Together with things like inversion-of-control and the rule of thumb to split DTOs sending data to external services from the ones used to receive data from external services this already takes one a long way. 
 Fill it in with concepts like bounded-context and aggregates from domain-driven-design (DDD) and in my experience you are at a great place to start a project which is not a simple CRUD application.
