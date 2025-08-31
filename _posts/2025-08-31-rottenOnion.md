@@ -2,7 +2,7 @@
 layout: post
 title: "The rotten onion"
 date: 2025-08-31 16:00:49 +0200
-image: assets/images/rotten_onion/rotten_onion.png 
+image: assets/rotten_onion/rotten_onion.png 
 categories:
   - architecture
   - ddd
