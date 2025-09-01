@@ -25,7 +25,7 @@ And now in this article.
 ## Onion Architecture
 
 Let me set the stage.
-Since a few years I try to use domain-drive-design in projects. 
+Since a few years I try to use domain-driven-design in projects. 
 Not in every project, but in the ones that lend themselves to it.
 And I usually tend to use a onion architecture style.
 Why not hexagonal you may ask.
@@ -117,7 +117,7 @@ One issue here is, with only the domain entity in hand there is no way to know i
 Another issue is, for your ORM to be able to load the collection lazily the comments need to know their parent.
 They need to hold a reference to a post.
 In the domain model, one will now have a bi-directional relation.
-No matter if was wanted, needed or should not be there.
+No matter if it was wanted, needed or should not be there.
 
 In this simple case, one could try to make a decision and think about the probability the post is ever needed without comments.
 If this probability is low, one can use eager loading and tell the ORM to fetch this collection always.
@@ -169,7 +169,7 @@ When the domain and persistence entity are the same, one must now decide if this
 Keeping it in the same table will increase the amount of data loaded from the database every time the entity is loaded.
 Moving it into another table will introduce a `@OneToOne` relation.
 And at least with Hibernate `@OneToOne` mappings can be a bit tricky when it comes to lazy loading and performance.
-Again, when using a merged persistence and domain model puts one into the situation where one has to think about both models at the same time.
+Again, using a merged persistence and domain model puts one into the situation where one has to think about both models at the same time.
 
 
 ### Optional relations and properties
@@ -220,7 +220,7 @@ One will need to first load data, map it to a domain entity, then map the domain
 A doable way could include reloading the data first, then mapping the domain entity or only the changes to the persistence model.
 Most likely, the ORM will have kept the persistence entity in a first level cache as long as the transaction is open.
 No extra database call will be issued.
-While this is a solvable problem, it need thought to it.
+While this is a solvable problem, it need to put some thought into it.
 And it makes splitting domain and persistence entity harder to defend and also harder to do.
 
 ## Alternatives
@@ -230,6 +230,7 @@ Of course there are alternatives:
 * One could ditch ORMs altogether and resort to SQL-Queries and projections.
 * One could ditch relational databases in some cases - this will impose other issues, but it might be worth it.
 * One could put all the business logic into services and ditch DDD altogether.
+* [Krzysztof Massalski](https://www.linkedin.com/in/krzysztof-massalski-a88a80234/) came up with using event sourcing. This way your domain model will be populated by past events. This has the side-effect of most likely splitting read and write models. This may help, but will introduce one to new issues coming from event sourcing and most likely an event driven architecture.
 
 ## Is the rotten onion bad?
 
