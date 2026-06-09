@@ -243,7 +243,7 @@ DESIST stands for
 In case you wonder, dispute replaces repudiation.
 
 When it comes to privacy threats, Adam Shostack mentions [LINDDUN](https://linddun.org/linddun/whyuselinddun/) in his book.
-LINDUNN stands for: 
+LINDDUN stands for: 
 
 * **L**inkability
 * **I**dentifiability
